@@ -1,0 +1,20 @@
+# general
+description: Spring Config Server
+user: admin
+workdir: /var/work
+---
+# test environment
+spring:
+  profiles:
+    active: dev
+db:
+  user: ${user}
+  password: test123
+---
+# production environment
+spring:
+  profiles:
+    active: prod
+db:
+  user: ${user}
+  password: prod123
